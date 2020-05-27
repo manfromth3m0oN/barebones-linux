@@ -1,2 +1,5 @@
 linux-*
 vmlinuz
+*.tar.*
+busybox-*
+initfs/bin

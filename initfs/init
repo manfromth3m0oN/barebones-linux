@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "mounting /proc and /sys"
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+
+echo "mdeving"
+mdev -s
+
+echo "entering sh"
+while true
+do
+	setid cttyhack sh
+	sleep 1
+done
